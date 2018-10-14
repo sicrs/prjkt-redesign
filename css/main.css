@@ -30,15 +30,11 @@ body {
 }
 
 .mdc-top-app-bar__title {
-    font-family: 'Google Sans';
+    font-family: 'Roboto Mono';
 }
 
 .mdc-top-app-bar .active {
     --mdc-theme-primary: var(--mdc-theme-secondary)
-}
-
-.mdc-top-app-bar button .mdc-button.mdc-ripple-upgraded--background-focused::before {
-    opacity: 0;
 }
 
 .hero {
