@@ -96,7 +96,7 @@ let content = {
     one: {
         link: "https://play.google.com/store/apps/details?id=projekt.substratum",
         title: "substratum",
-        desc: "Initially developed as a successor to the former product, Layers Manager, the new Substratum Theme Engine (available on Play Store) has been widely used amongst Android enthusiasts running Android 6.0 to Android 8.0. Mainly geared towards customizing system themes through Sony's Overlay Manager Service, as well as the deprecated system - Runtime Resource Overlay."
+        desc: "Initially developed as a successor to the former product, Layers Manager, the new Substratum Theme Engine (available on Play Store) has been widely used amongst Android enthusiasts running Android 6.0 to Android 9. Mainly geared towards customizing system themes through Sony's Overlay Manager Service, as well as the deprecated system - Runtime Resource Overlay."
     },
     two: {
         link: "https://play.google.com/store/apps/details?id=projekt.andromeda",
