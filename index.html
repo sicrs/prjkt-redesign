@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>prjkt.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" media="screen" href="css/material-components-web.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans" />
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/brands.css" integrity="sha384-rf1bqOAj3+pw6NqYrtaE1/4Se2NBwkIfeYbsFdtiR6TQz0acWiwJbv1IM/Nt/ite" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
+
+        <script src="js/material-components-web.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/anime.min.js"></script>
+        <script src="js/smoothscroll.js"></script>
+    </head>
+    <body class="mdc-typography theme-primary">
+        <header class="mdc-top-app-bar mdc-top-app-bar--fixed animatables">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <span class="mdc-top-app-bar__title">prjkt</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                    <button class="mdc-button projects-button">Projects</button>
+                    <button class="mdc-button">About</button>
+                    <button class="mdc-button">Team</button>
+                </section>
+            </div>
+        </header>
+        <div class="main mdc-top-app-bar--fixed-adjust">
+            
+            <div class="hero animatables mdc-top-app-bar--fixed-adjust" style="text-align: center; ">
+                <div class="container" style="padding-top: 25vh;">
+                    <h1 class="mdc-typography--headline2 title" style="font-family: 'Google Sans'; margin: 0px;">projekt.</h1>
+
+                    <div class="link-container" style="align-items: center;">
+                        <a class="mdc-icon-button">
+                            <i class="mdi mdi-telegram" style="color: #0085FF"></i>
+                        </a>
+
+                        <a class="mdc-icon-button">
+                            <i class="mdi mdi-github-circle"></i>
+                        </a>
+
+                        <a class="mdc-icon-button">
+                            <i class="mdi mdi-xda" style="color: #F59714"></i>
+                        </a>
+
+                        <a class="mdc-icon-button">
+                            <i class="mdi mdi-animation-outline"></i>
+                        </a>
+                    </div>
+                </div>
+                <!--
+                <div class="product-container">
+                    <a class="mdc-icon-button"><img src="assets/images/image02.png" width="50px"></a>
+                    ·
+                    <a class="mdc-icon-button"><img src="assets/images/image03.png" width="50px"></a>
+                    ·
+                    <a class="mdc-icon-button"><img src="assets/images/image04.png" width="50px"></a>
+                    ·
+                    <a class="mdc-icon-button"><img src="assets/images/image05.png" width="50px"></a>
+                </div>
+                -->
+            </div>
+            
+            <div class="projects animatables" style="height: 100vh; ">
+                <h1 class="projects-header mdc-typography--subtitle1" style="margin-top: 64px;">Projects</h1>
+                
+                <div class="mdc-tab-bar" role="tablist">
+                    <div class="mdc-tab-scroller">
+                        <div class="mdc-tab-scroller__scroll-area">
+                            <div class="mdc-tab-scroller__scroll-content">
+                                <button class="mdc-tab demo-tab mdc-tab--active" role="tab" onclick="load('one', content)">
+                                    <span class="mdc-tab__content">
+                                        <img src="assets/images/image02.png" width="24px">
+                                        
+                                    </span>
+                                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+
+                                <button class="mdc-tab demo-tab" role="tab" onclick="load('two', content)">
+                                    <span class="mdc-tab__content">
+                                        <img src="assets/images/image03.png" width="24px">
+                                        
+                                    </span>
+                                    <span class="mdc-tab-indicator">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+                                 
+                                <button class="mdc-tab demo-tab" role="tab" onclick="load('three', content)">
+                                    <div class="mdc-tab__content">
+                                        <img src="assets/images/image04.png" width="24px">
+                                        
+                                    </div>
+                                    <span class="mdc-tab-indicator">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <div class="mdc-tab__ripple"></div>
+                                </button>
+
+                                <button class="mdc-tab demo-tab" role="tab" onclick="load('four', content)">
+                                    <div class="mdc-tab__content">
+                                        <img src="assets/images/image05.png" width="24px">
+                                        
+                                    </div>
+                                    <span class="mdc-tab-indicator">
+                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                    </span>
+                                    <div class="mdc-tab__ripple"></div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
