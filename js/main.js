@@ -116,6 +116,6 @@ let content = {
     five: {
         link: "https://play.google.com/store/apps/details?id=projekt.launcher",
         title: "hyperion launcher",
-        desc: "Providing a beautiful, yet feature-filled consolidated launcher experience, "
+        desc: "Providing a beautiful, yet feature-filled consolidated launcher experience."
     }
 }
