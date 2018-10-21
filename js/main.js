@@ -9,7 +9,7 @@ window.onload = function() {
     load("one", content)
 }
 //TODO throttle onscroll
-window.onscroll = throttle(scrollCallback, 200)
+window.onscroll = throttle(scrollCallback, 180)
 
 
 function scrollCallback() {
@@ -48,58 +48,8 @@ function scrollCallback() {
         }, 200, 'linear', function() {console.log('debug-test')});
     };
 }
-/***
-window.onscroll = () => {
-    if (isElementInViewport(document.querySelector('.title')) === false) {
-        if (isElementInViewport(document.querySelector('.projects-header')) === true) {
-            document.querySelector('.projects-button').classList.add('active')
-        }
-        //anime({
-        //    targets: '.mdc-top-app-bar__title',
-        //    color: '#FFF'
-        //});
-        document.body.classList.remove('theme-primary');
-        document.body.classList.add('theme-secondary');
-        /*
-        anime({
-            targets: '.animatables',
-            color: '#FFF',
-            backgroundColor: '#000',
-            duration: 15,
-            easing: 'linear'
-        });
-        
-    } else {
-        
-        /*
-        anime({
-            targets: '.mdc-top-app-bar__title',
-            color: '#FFF'
-        });
-        
-        document.body.classList.remove('theme-secondary');
-        document.body.classList.add('theme-primary');
-        
-        /*
-        anime({
-            targets: '.animatables',
-            color: '#000',
-            backgroundColor: '#FFF',
-            duration: 15,
-            easing: 'linear'
-        });
-        
-        //document.querySelector('.active').classList.remove('active')
-    };
-    
-    if (isElementInViewport(document.querySelector('.projects')) === true) {
-        document.querySelector('.projects-button').classList.add('mdc-button--raised')
-    } else {
-        document.querySelector('.projects-button').classList.remove('mdc-button--raised')
-    }
-};
-**/
-const init = () => {
+
+function init () {
     mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'))
     
     let buttons = document.querySelectorAll('.mdc-button')
@@ -112,7 +62,7 @@ const init = () => {
         mdc.ripple.MDCRipple.attachTo(links[i])
     }
 
-    tabbar = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
+    let tabbar = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
     document.querySelector('.projects-button').addEventListener('click', (e) => {
         document.querySelector('.projects').scrollIntoView({behavior: 'smooth'})
