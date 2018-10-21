@@ -112,5 +112,10 @@ let content = {
         link: "https://play.google.com/store/apps/details?id=projekt.sungstratum",
         title: "sungstratum",
         desc: "An add-on to enable substratum for Samsung users on Android 7.x, regardless of whether your device is rooted or not."
+    },
+    five: {
+        link: "https://play.google.com/store/apps/details?id=projekt.launcher",
+        title: "hyperion launcher",
+        desc: "Providing a beautiful, yet feature-filled consolidated launcher experience, "
     }
 }
