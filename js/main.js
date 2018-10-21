@@ -1,21 +1,66 @@
-window.onload = () => {
+window.onload = function() {
     init()
-    //make sure top-app-bar title isnt visible onload
-    isElementInViewport(document.querySelector('.title')) ? anime({targets: '.mdc-top-app-bar__title', color: '#FFF'}) : anime({targets: '.mdc-top-app-bar__title', color: '#000'}) 
+    //make sure top-app-bar title isn't visible onload
+    if (isElementInViewport(selector('.title')) === true) {
+        Velocity(selector('.mdc-top-app-bar__title'), {color: '#FFF'})
+    } else {
+        Velocity(selector('.mdc-top-app-bar__title'), {color: '#000'})
+    }
     load("one", content)
 }
+//TODO throttle onscroll
+window.onscroll = throttle(scrollCallback, 200)
 
+
+function scrollCallback() {
+    if (isElementInViewport(selector('.title')) === true) {
+        selector('.active') ? selector('.active').classList.remove('active') : //do nothing
+        //selector('.projects-button').classList.remove('mdc-button--raised');
+        //animate top-app-bar title
+        Velocity(selector('.mdc-top-app-bar__title'), {
+            color: '#ffffff'
+        });
+        //change theme colors
+        document.body.classList.remove('theme-secondary');
+        document.body.classList.add('theme-primary');
+        //animate background color
+        Velocity(document.querySelectorAll('.animatables'), {
+            color: '#000000',
+            backgroundColor: '#ffffff',
+            backgroundColorAlpha: 1 //just in case
+        }, 200, 'linear', function() {console.log('one')});
+    } else {
+        if (isElementInViewport(selector('.projects-header'))) {
+            selector('.projects-button').classList.add('active');
+            //selector('.projects-button').classList.add('mdc-button--raised');
+        }
+        Velocity(selector('.mdc-top-app-bar__title'), {
+            color: '#ffffff'
+        });
+
+        document.body.classList.remove('theme-primary');
+        document.body.classList.add('theme-secondary');
+
+        Velocity(document.querySelectorAll('.animatables'), {
+            color: '#ffffff',
+            backgroundColor: '#000000',
+            backgroundColorAlpha: 1
+        }, 200, 'linear', function() {console.log('debug-test')});
+    };
+}
+/***
 window.onscroll = () => {
     if (isElementInViewport(document.querySelector('.title')) === false) {
         if (isElementInViewport(document.querySelector('.projects-header')) === true) {
             document.querySelector('.projects-button').classList.add('active')
         }
-        anime({
-            targets: '.mdc-top-app-bar__title',
-            color: '#FFF'
-        });
+        //anime({
+        //    targets: '.mdc-top-app-bar__title',
+        //    color: '#FFF'
+        //});
         document.body.classList.remove('theme-primary');
         document.body.classList.add('theme-secondary');
+        /*
         anime({
             targets: '.animatables',
             color: '#FFF',
@@ -25,12 +70,17 @@ window.onscroll = () => {
         });
         
     } else {
+        
+        /*
         anime({
             targets: '.mdc-top-app-bar__title',
             color: '#FFF'
         });
+        
         document.body.classList.remove('theme-secondary');
         document.body.classList.add('theme-primary');
+        
+        /*
         anime({
             targets: '.animatables',
             color: '#000',
@@ -38,16 +88,17 @@ window.onscroll = () => {
             duration: 15,
             easing: 'linear'
         });
-        document.querySelector('.projects-button').classList.remove('active')
+        
+        //document.querySelector('.active').classList.remove('active')
     };
-
+    
     if (isElementInViewport(document.querySelector('.projects')) === true) {
         document.querySelector('.projects-button').classList.add('mdc-button--raised')
     } else {
         document.querySelector('.projects-button').classList.remove('mdc-button--raised')
     }
 };
-
+**/
 const init = () => {
     mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'))
     
@@ -119,3 +170,17 @@ let content = {
         desc: "Providing a beautiful, yet feature-filled consolidated launcher experience."
     }
 }
+
+function selector (element) {
+    return document.querySelector(element)
+}
+
+function throttle(func, wait) {
+    let time = Date.now();
+    return function() {
+        if ((time + wait - Date.now()) < 0) {
+            func();
+            time = Date.now();
+        };
+    };
+};
