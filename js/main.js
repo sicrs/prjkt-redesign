@@ -9,7 +9,7 @@ window.onload = function() {
     load("one", content)
 }
 //TODO throttle onscroll
-window.onscroll = throttle(scrollCallback, 180)
+window.onscroll = throttle(scrollCallback, 175)
 
 
 function scrollCallback() {
