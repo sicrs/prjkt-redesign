@@ -22,7 +22,7 @@ window.onscroll = () => {
                 targets: '.animatables',
                 color: '#000',
                 backgroundColor: '#FFF',
-                duration: 200,
+                duration: 150,
                 easing: 'linear',
                 begin: function(anim) {
                     document.body.classList.add('animating');
@@ -57,7 +57,7 @@ window.onscroll = () => {
                     targets: '.animatables',
                     color: '#FFF',
                     backgroundColor: '#000',
-                    duration: 200,
+                    duration: 150,
                     easing: 'linear',
                     begin: function(anim) {
                         document.body.classList.add('animating');
