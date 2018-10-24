@@ -6,45 +6,74 @@ window.onload = () => {
 }
 
 window.onscroll = () => {
-    if (isElementInViewport(document.querySelector('.title')) === false) {
-        if (isElementInViewport(document.querySelector('.projects-header')) === true) {
-            document.querySelector('.projects-button').classList.add('active')
+    if (isElementInViewport(document.querySelector('.title')) === true) {
+        if (!document.body.classList.contains('animating')) {
+            anime({
+                targets: '.mdc-top-app-bar__title',
+                color: '#FFF',
+                begin: function(anim) {
+                    document.body.classList.add('animating');
+                },
+                complete: function(anim) {
+                    document.body.classList.remove('animating');
+                }
+            });
+            anime({
+                targets: '.animatables',
+                color: '#000',
+                backgroundColor: '#FFF',
+                duration: 200,
+                easing: 'linear',
+                begin: function(anim) {
+                    document.body.classList.add('animating');
+                },
+                complete: function(anim) {
+                    document.body.classList.remove('animating');
+                }
+            });
+        } else {
+            //nothing
         }
-        anime({
-            targets: '.mdc-top-app-bar__title',
-            color: '#FFF'
-        });
-        document.body.classList.remove('theme-primary');
-        document.body.classList.add('theme-secondary');
-        anime({
-            targets: '.animatables',
-            color: '#FFF',
-            backgroundColor: '#000',
-            duration: 15,
-            easing: 'linear'
-        });
         
-    } else {
-        anime({
-            targets: '.mdc-top-app-bar__title',
-            color: '#FFF'
-        });
         document.body.classList.remove('theme-secondary');
         document.body.classList.add('theme-primary');
-        anime({
-            targets: '.animatables',
-            color: '#000',
-            backgroundColor: '#FFF',
-            duration: 15,
-            easing: 'linear'
-        });
+        
         document.querySelector('.projects-button').classList.remove('active')
-    };
-
-    if (isElementInViewport(document.querySelector('.projects')) === true) {
-        document.querySelector('.projects-button').classList.add('mdc-button--raised')
     } else {
-        document.querySelector('.projects-button').classList.remove('mdc-button--raised')
+        if (isElementInViewport(document.querySelector('.projects-header')) === true) {
+            document.querySelector('.projects-button').classList.add('active');
+            if (!document.body.classList.contains('animating')) {
+                anime({
+                    targets: '.mdc-top-app-bar__title',
+                    color: '#FFF',
+                    begin: function(anim) {
+                        document.body.classList.add('animating');
+                    },
+                    complete: function(anim) {
+                        document.body.classList.remove('animating');
+                    }
+                });
+                anime({
+                    targets: '.animatables',
+                    color: '#FFF',
+                    backgroundColor: '#000',
+                    duration: 200,
+                    easing: 'linear',
+                    begin: function(anim) {
+                        document.body.classList.add('animating');
+                    },
+                    complete: function(anim) {
+                        document.body.classList.remove('animating');
+                    }
+                });
+            } else {
+                //nothing
+            }
+            
+            document.body.classList.remove('theme-primary');
+            document.body.classList.add('theme-secondary');
+            
+        }
     }
 };
 
@@ -64,7 +93,10 @@ const init = () => {
     tabbar = new mdc.tabBar.MDCTabBar(document.querySelector('.mdc-tab-bar'));
 
     document.querySelector('.projects-button').addEventListener('click', (e) => {
-        document.querySelector('.projects').scrollIntoView({behavior: 'smooth'})
+        document.querySelector('.projects').scrollIntoView({behavior: 'smooth'});
+    })
+    document.querySelector('.about-button').addEventListener("click", function (e) {
+        document.querySelector('.about').scrollIntoView({behavior: 'smooth'});
     })
 }
 
