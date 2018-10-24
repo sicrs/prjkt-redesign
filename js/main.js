@@ -7,6 +7,9 @@ window.onload = () => {
 
 window.onscroll = () => {
     if (isElementInViewport(document.querySelector('.title')) === true) {
+        if (document.querySelector('.active')) {
+            document.querySelector('.active').classList.remove('active')
+        }
         if (!document.body.classList.contains('animating')) {
             anime({
                 targets: '.mdc-top-app-bar__title',
@@ -25,16 +28,18 @@ window.onscroll = () => {
                     document.body.classList.remove('animating');
                 }
             });
+            document.body.classList.remove('theme-secondary');
+            document.body.classList.add('theme-primary');
         } else {
             //nothing
         }
         
-        document.body.classList.remove('theme-secondary');
-        document.body.classList.add('theme-primary');
-        
         document.querySelector('.projects-button').classList.remove('active')
     } else {
         if (isElementInViewport(document.querySelector('.projects-header')) === true) {
+            if (document.querySelector('.active')) {
+                document.querySelector('.active').classList.remove('active')
+            }
             document.querySelector('.projects-button').classList.add('active');
             if (!document.body.classList.contains('animating')) {
                 anime({
@@ -54,13 +59,42 @@ window.onscroll = () => {
                         document.body.classList.remove('animating');
                     }
                 });
+                document.body.classList.remove('theme-primary');
+                document.body.classList.add('theme-secondary');
             } else {
                 //nothing
             }
             
-            document.body.classList.remove('theme-primary');
-            document.body.classList.add('theme-secondary');
             
+            
+        } else if (isElementInViewport(document.querySelector('.about-header'))) {
+            if (document.querySelector('.active')) {
+                document.querySelector('.active').classList.remove('active')
+            }
+            document.querySelector('.about-button').classList.add('active');
+            if (!document.body.classList.contains('animating')) {
+                anime({
+                    targets: '.mdc-top-app-bar__title',
+                    color: '#000',
+                    begin: function(anim) {
+                        document.body.classList.add('animating');
+                    },
+                });
+                anime({
+                    targets: '.animatables',
+                    color: '#000',
+                    backgroundColor: '#FFF',
+                    duration: 150,
+                    easing: 'linear',
+                    complete: function(anim) {
+                        document.body.classList.remove('animating');
+                    }
+                });
+                document.body.classList.remove('theme-secondary');
+                document.body.classList.add('theme-primary');
+            } else {
+                //nothing
+            }
         }
     }
 };

@@ -84,7 +84,8 @@ body {
 
 
 .projects {
-    padding: 16px
+    padding: 16px;
+    height: 100vh
 }
 
 .mdc-tab {
@@ -116,3 +117,7 @@ body {
     opacity: 0;
 }
 */
+.about {
+    padding: 16px;
+    height: 100vh
+}
