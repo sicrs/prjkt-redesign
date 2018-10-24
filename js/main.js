@@ -2,7 +2,7 @@ window.onload = () => {
     init()
     //make sure top-app-bar title isnt visible onload
     isElementInViewport(document.querySelector('.title')) ? anime({targets: '.mdc-top-app-bar__title', color: '#FFF'}) : anime({targets: '.mdc-top-app-bar__title', color: '#000'}) 
-    load("one", content)
+    load("one", content, function() {console.log('ye')})
 }
 
 window.onscroll = () => {
@@ -14,9 +14,6 @@ window.onscroll = () => {
                 begin: function(anim) {
                     document.body.classList.add('animating');
                 },
-                complete: function(anim) {
-                    document.body.classList.remove('animating');
-                }
             });
             anime({
                 targets: '.animatables',
@@ -24,9 +21,6 @@ window.onscroll = () => {
                 backgroundColor: '#FFF',
                 duration: 150,
                 easing: 'linear',
-                begin: function(anim) {
-                    document.body.classList.add('animating');
-                },
                 complete: function(anim) {
                     document.body.classList.remove('animating');
                 }
@@ -48,9 +42,6 @@ window.onscroll = () => {
                     color: '#FFF',
                     begin: function(anim) {
                         document.body.classList.add('animating');
-                    },
-                    complete: function(anim) {
-                        document.body.classList.remove('animating');
                     }
                 });
                 anime({
@@ -59,9 +50,6 @@ window.onscroll = () => {
                     backgroundColor: '#000',
                     duration: 150,
                     easing: 'linear',
-                    begin: function(anim) {
-                        document.body.classList.add('animating');
-                    },
                     complete: function(anim) {
                         document.body.classList.remove('animating');
                     }
@@ -111,7 +99,7 @@ function isElementInViewport (el) {
 }
 
 //best shitty methodTM
-function load(tab, data) {
+function load(tab, data, debug) {
     let html = "";
     let contentKey = data[tab]
     html += '<h3 class="mdc-typography--headline6">' + contentKey.title + '</h3><p class="mdc-typography--subtitle1">' + contentKey.desc + '</p><a class="mdc-chip" href="' + contentKey.link + '"><i class="mdc-chip__icon mdc-chip__icon--leading mdi mdi-open-in-new"></i><span class="mdc-chip__text">'
@@ -122,6 +110,7 @@ function load(tab, data) {
     };
     html += '</span></a>'
     document.querySelector('.project-content').innerHTML = html
+    if (debug) {debug()}
 }
 
 let content = {
