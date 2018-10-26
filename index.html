@@ -11,6 +11,8 @@
         <link rel="stylesheet" type="text/css" href="css/main.css" />
         <link rel="stylesheet" href="https://cdn.materialdesignicons.com/2.8.94/css/materialdesignicons.min.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
         <script src="js/material-components-web.min.js"></script>
         <script src="js/main.js"></script>
@@ -21,9 +23,10 @@
         <header class="mdc-top-app-bar mdc-top-app-bar--fixed animatables">
             <div class="mdc-top-app-bar__row">
                 <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <a class="material-icons mdc-top-app-bar__navigation-icon phone" href="#">menu</a>
                     <span class="mdc-top-app-bar__title">prjkt</span>
                 </section>
-                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end desktop">
                     <button class="mdc-button projects-button">Projects</button>
                     <button class="mdc-button about-button">About</button>
                     <button class="mdc-button">Team</button>
@@ -67,81 +70,120 @@
                 -->
             </div>
             
-            <div class="projects animatables">
-                <h1 class="projects-header mdc-typography--subtitle1" style="margin-top: 64px;">Projects</h1>
+            <div class="projects animatables mdc-layout-grid">
+                <h1 class="mdc-typography__headline5 projects-header" style="padding: 32px;">Projects</h1>
                 
-                <div class="mdc-tab-bar" role="tablist">
-                    <div class="mdc-tab-scroller">
-                        <div class="mdc-tab-scroller__scroll-area">
-                            <div class="mdc-tab-scroller__scroll-content">
-                                <button class="mdc-tab demo-tab mdc-tab--active" role="tab" onclick="load('one', content)">
-                                    <span class="mdc-tab__content">
-                                        <img src="assets/images/image02.png" width="24px">
-                                        
-                                    </span>
-                                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <span class="mdc-tab__ripple"></span>
-                                </button>
+                <div class="mdc-layout-grid__inner">
 
-                                <button class="mdc-tab demo-tab" role="tab" onclick="load('two', content)">
-                                    <span class="mdc-tab__content">
-                                        <img src="assets/images/image03.png" width="24px">
-                                        
-                                    </span>
-                                    <span class="mdc-tab-indicator">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <span class="mdc-tab__ripple"></span>
-                                </button>
-                                 
-                                <button class="mdc-tab demo-tab" role="tab" onclick="load('three', content)">
-                                    <div class="mdc-tab__content">
-                                        <img src="assets/images/image04.png" width="24px">
-                                        
+                    <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <div class="project-item">
+                            <a href="https://play.google.com/store/apps/details?id=projekt.substratum">
+                            
+                                <div class="project-image"></div>
+                                <div class="project-content">
+                                    <div class="project-heading">
+                                        substratum
                                     </div>
-                                    <span class="mdc-tab-indicator">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <div class="mdc-tab__ripple"></div>
-                                </button>
+                                    <div class="project-desc">
+                                        Substratum utilises Sony's Overlay Manager Service as well as the deprecated system - Runtime Resource Overlay - to provide flexible and dynamic system-theming capabilities 
+                                    </div>
+                                    <div class="project-tag url">
+                                        <i class="material-icons">open_in_new</i>
+                                        play.google.com
+                                    </div>
+                                </div>
+                            
+                            </a>
+                    </div>
+                    </div>
 
-                                <button class="mdc-tab demo-tab" role="tab" onclick="load('four', content)">
-                                    <div class="mdc-tab__content">
-                                        <img src="assets/images/image05.png" width="24px">
-                                        
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <div class="project-item">
+                            <a>
+                                <div class="project-image" style="background-image: url(assets/images/image07.png)"></div>
+                                <div class="project-content">
+                                    <div class="project-heading">
+                                        andromeda
                                     </div>
-                                    <span class="mdc-tab-indicator">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <div class="mdc-tab__ripple"></div>
-                                </button>
+                                    <div class="project-desc">
+                                        Andromeda is a plugin for substratum that enables rootless mode on Android 8.x devices.
+                                    </div>
+                                    <div class="project-tag url">
+                                        <i class="material-icons">open_in_new</i>
+                                        play.google.com
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-                                <button class="mdc-tab demo-tab" role="tab" onclick="load('five', content)">
-                                    <div class="mdc-tab__content">
-                                        <img src="assets/images/image06.png" width="24px">
-                                        
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <div class="project-item">
+                            <a>
+                                <div class="project-image"></div>
+                                <div class="project-content">
+                                    <div class="project-heading">
+                                        substratum resources
                                     </div>
-                                    <span class="mdc-tab-indicator">
-                                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                    </span>
-                                    <div class="mdc-tab__ripple"></div>
-                                </button>
-                            </div>
+                                    <div class="project-desc">
+                                        A collection of repositories affiliating with the platform side changes to get Substratum and OMS working in harmony.
+                                    </div>
+                                    <div class="project-tag url">
+                                        <i class="material-icons">open_in_new</i>
+                                        github.com
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <div class="project-item">
+                            <a>
+                                <div class="project-image"></div>
+                                <div class="project-content">
+                                    <div class="project-heading">
+                                        sungstratum
+                                    </div>
+                                    <div class="project-desc">
+                                        An add-on to enable substratum for Samsung users on Android 7.x, regardless of whether your device is rooted or not.
+                                    </div>
+                                    <div class="project-tag url">
+                                        <i class="material-icons">open_in_new</i>
+                                        play.google.com
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                        <div class="project-item">
+                            <a>
+                                <div class="project-image"></div>
+                                <div class="project-content">
+                                    <div class="project-heading">
+                                        hyperion
+                                    </div>
+                                    <div class="project-desc">
+                                        Providing a beautiful, yet feature-filled consolidated launcher experience.
+                                    </div>
+                                    <div class="project-tag url">
+                                        <i class="material-icons">open_in_new</i>
+                                        play.google.com
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <div class="project-content">
-                    
-                </div>
+                
             </div>
-
+            <!--
             <div class="about">
                 <h1 class="about-header mdc-typography--subtitle1" style="margin-top: 64px;">About</h1>
                 <p class="mdc-typography--subtitle1">Formed in March 2017, we are a small team of developers based in Philadelphia, PA.<br>Our developers and team members are dedicated to develop Android applications that seek and conquer ideas that people believed to not be possible.<br>Working closely with XDA Developers and many community-oriented companies, our small start-up has over 2M monthly active users amongst all applications and platforms!</p>
-            </div>
+            </div>-->
         </div>
     </body>
 </html>

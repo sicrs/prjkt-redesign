@@ -1,5 +1,28 @@
-body {
+/*RULES*/
+@media (max-width: 479px) {
+    .phone {
+        visibility: visible
+    }
+    .desktop {
+        visibility: hidden
+    }
+}
+
+@media (min-width: 480px) {
+    .phone {
+        visibility: hidden
+    }
+    .desktop {
+        visibility: visible
+    }
+}
+
+* {
     margin: 0px;
+    padding: 0px;
+}
+
+body {
     font-family: 'Roboto';
 }
 
@@ -13,7 +36,7 @@ body {
 .theme-secondary {
     --mdc-theme-primary: #000000;
     --mdc-theme-on-primary: #FFFFFF;
-    --mdc-theme-secondary: #4885ed;
+    --mdc-theme-secondary: #f44336;
     --mdc-theme-on-secondary: #EEEEEE;
 }
 
@@ -81,36 +104,80 @@ body {
 }
 */
 
-
-
+/*PROJECTS*/
 .projects {
-    padding: 16px;
-    height: 100vh
+    padding: 0px 5vw;
 }
 
-.mdc-tab {
-    --mdc-theme-primary: var(--mdc-theme-secondary)
+.projects h1 {
+    font-family: 'Roboto Mono';
+    font-weight: 300;
 }
 
-.mdc-tab-bar {
-    width: 75vw
+.mdc-layout-grid__inner {
+    padding: 0 2.5vw;
+}
+
+.project-item {
+    padding : 32px;
+    height: auto;
+    margin: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.project-image::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 66.67%;
+}
+
+.project-item:hover {
+    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 1px 8px 0 rgba(0,0,0,.12)
+}
+
+.project-image {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/test.png);
+    
+}
+
+.project-item a {
+    text-transform: none;
+    text-decoration: none;
+    color: #424242;
+    border-radius: 8px;
 }
 
 .project-content {
-    width: 75vw
+    margin-top: 24px;
 }
 
-.mdc-chip {
-    background-color: #777777;
-    color: var(--mdc-theme-on-primary)
+.project-heading {
+    font-size: 24px;
+    font-family: 'Roboto Mono';
+    font-weight: 500
 }
 
-.mdc-chip:hover {
-    color: var(--mdc-theme-on-secondary)
+.project-desc {
+    margin-top: 8px;
+    font-size: 14px;
 }
 
-.mdc-chip__icon {
-    color: var(--mdc-theme-on-primary)
+.project-tag {
+    font-size: .875rem;
+    font-family: 'Roboto Mono';
+    margin-top: 16px;
+    font-weight: 400;
+}
+
+.project-tag i {
+    margin-right: 8px;
+    vertical-align: middle;
 }
 /*
 .mdc-ripple-upgraded--background-focused {
