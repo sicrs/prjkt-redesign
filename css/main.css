@@ -6,6 +6,9 @@
     .desktop {
         visibility: hidden
     }
+    .mdc-layout-grid__inner {
+        align-items: center;
+    }
 }
 
 @media (min-width: 480px) {
@@ -17,9 +20,19 @@
     }
 }
 
+@media (min-width: 480px) and (max-width: 839px) {
+    .mdc-layout-grid__inner {
+        align-content: center;
+    }
+}
+
 * {
     margin: 0px;
     padding: 0px;
+}
+
+html {
+    overflow-x: hidden
 }
 
 body {
@@ -34,8 +47,8 @@ body {
 }
 
 .theme-secondary {
-    --mdc-theme-primary: #000000;
-    --mdc-theme-on-primary: #FFFFFF;
+    --mdc-theme-primary: #FFFFFF;
+    --mdc-theme-on-primary: #000000;
     --mdc-theme-secondary: #f44336;
     --mdc-theme-on-secondary: #EEEEEE;
 }
@@ -44,7 +57,7 @@ body {
     color: var(--mdc-theme-on-primary);
 }
 
-.mdc-button {
+header .mdc-button {
     --mdc-theme-primary: var(--mdc-theme-on-primary);
 }
 
@@ -61,27 +74,35 @@ body {
     --mdc-theme-primary: var(--mdc-theme-secondary)
 }
 
-.hero {
-    height: 100vh
+.hero .container {
+    padding: 20vh 15vw 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../assets/images/bg.jpg);
+    background-attachment: fixed;
+    color: #EEEEEE;
 }
 
-.link-container {
-    margin: 16px;
-    padding: 16px;
+.hero .desc {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
-.link-container a {
-    display: inline;
-    padding: 20px;
-    font-size: 2rem;
+.hero .title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    font-family: 'Roboto Mono';
 }
 
-.link-container a::before {
-    content: "U+00B7"
+.hero .links {
+    padding-top: 24px;
 }
 
-.link-container a:hover::before {
-    opacity: 0;
+.hero .links .mdc-button {
+    margin: 16px 8px;
 }
 /*
 .product-container {
@@ -105,8 +126,12 @@ body {
 */
 
 /*PROJECTS*/
+.buffer-projects {
+    height: 80px;
+}
+
 .projects {
-    padding: 0px 5vw;
+    padding: 0px 2.5vw;
 }
 
 .projects h1 {
@@ -121,7 +146,7 @@ body {
 .project-item {
     padding : 32px;
     height: auto;
-    margin: 16px;
+    margin: 0 16px;
     box-sizing: border-box;
     border-radius: 4px;
 }
@@ -158,9 +183,10 @@ body {
 }
 
 .project-heading {
-    font-size: 24px;
-    font-family: 'Roboto Mono';
-    font-weight: 500
+    font-size: 1rem;
+    font-family: 'Roboto';
+    font-weight: 700;
+    letter-spacing: .75px;
 }
 
 .project-desc {

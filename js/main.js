@@ -1,10 +1,7 @@
-let drawer;
-
 window.onload = () => {
     init()
     //make sure top-app-bar title isnt visible onload
     isElementInViewport(document.querySelector('.title')) ? anime({targets: '.mdc-top-app-bar__title', color: '#FFF'}) : anime({targets: '.mdc-top-app-bar__title', color: '#000'}) 
-    
 }
 
 window.onscroll = () => {
@@ -12,6 +9,7 @@ window.onscroll = () => {
         if (document.querySelector('.active')) {
             document.querySelector('.active').classList.remove('active')
         }
+        /*
         if (!document.body.classList.contains('animating')) {
             anime({
                 targets: '.mdc-top-app-bar__title',
@@ -35,7 +33,9 @@ window.onscroll = () => {
         } else {
             //nothing
         }
-        
+        */
+        document.body.classList.remove('theme-secondary');
+        document.body.classList.add('theme-primary');
         document.querySelector('.projects-button').classList.remove('active')
     } else {
         if (isElementInViewport(document.querySelector('.projects-header')) === true) {
@@ -43,6 +43,7 @@ window.onscroll = () => {
                 document.querySelector('.active').classList.remove('active')
             }
             document.querySelector('.projects-button').classList.add('active');
+            /*
             if (!document.body.classList.contains('animating')) {
                 anime({
                     targets: '.mdc-top-app-bar__title',
@@ -66,14 +67,16 @@ window.onscroll = () => {
             } else {
                 //nothing
             }
-            
-            
+            */
+           document.body.classList.remove('theme-primary');
+           document.body.classList.add('theme-secondary');
             
         } else if (isElementInViewport(document.querySelector('.about-header'))) {
             if (document.querySelector('.active')) {
                 document.querySelector('.active').classList.remove('active')
             }
             document.querySelector('.about-button').classList.add('active');
+            /*
             if (!document.body.classList.contains('animating')) {
                 anime({
                     targets: '.mdc-top-app-bar__title',
@@ -97,13 +100,17 @@ window.onscroll = () => {
             } else {
                 //nothing
             }
+            */
+            document.body.classList.remove('theme-secondary');
+            document.body.classList.add('theme-primary');
         }
     }
 };
 
 const init = () => {
+    //instantiate top-app-bar
     const topAppBar = mdc.topAppBar.MDCTopAppBar.attachTo(document.querySelector('.mdc-top-app-bar'))
-    
+    //instantiate buttons and links
     let buttons = document.querySelectorAll('.mdc-button')
     for (let i = 0; i < buttons.length; i++) {
         mdc.ripple.MDCRipple.attachTo(buttons[i])
@@ -113,21 +120,13 @@ const init = () => {
     for (let i = 0; i < links.length; i++) {
         mdc.ripple.MDCRipple.attachTo(links[i])
     }
-
-    drawer = mdc.drawer.MDCDrawer.attachTo(document.querySelector('.mdc-drawer'))
-
     document.querySelector('.projects-button').addEventListener('click', (e) => {
-        document.querySelector('.projects').scrollIntoView({behavior: 'smooth'});
+        document.querySelector('.buffer-projects').scrollIntoView({behavior: 'smooth'});
     })
     document.querySelector('.about-button').addEventListener("click", function (e) {
         document.querySelector('.about').scrollIntoView({behavior: 'smooth'});
     })
 
-    topAppBar.setScrollTarget(document.querySelector('.main'));
-    topAppBar.listen('MDCTopAppBar:nav', () => {
-        drawer.open = !drawer.open;
-    });
-    document.querySelector('.mdc-drawer-scrim').addEventListener("click", function() {drawer.open = false})
 }
 
 function isElementInViewport (el) {
