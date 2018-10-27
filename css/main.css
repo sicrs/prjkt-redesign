@@ -20,12 +20,6 @@
     }
 }
 
-@media (min-width: 480px) and (max-width: 839px) {
-    .mdc-layout-grid__inner {
-        align-content: center;
-    }
-}
-
 * {
     margin: 0px;
     padding: 0px;
@@ -87,12 +81,13 @@ header .mdc-button {
 }
 
 .hero .desc {
-    font-size: 1.5rem;
+    font-size: 18px;
     letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .hero .title {
-    font-size: 2.5rem;
+    font-size: 48px;
     font-weight: 500;
     font-family: 'Roboto Mono';
 }
@@ -181,7 +176,7 @@ header .mdc-button {
 .project-heading {
     font-size: 1rem;
     font-family: 'Roboto';
-    font-weight: 700;
+    font-weight: 300;
     letter-spacing: .75px;
 }
 
