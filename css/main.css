@@ -126,11 +126,8 @@ header .mdc-button {
 */
 
 /*PROJECTS*/
-.buffer-projects {
-    height: 80px;
-}
-
 .projects {
+    margin-top: 64px;
     padding: 0px 2.5vw;
 }
 

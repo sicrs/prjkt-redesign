@@ -121,7 +121,7 @@ const init = () => {
         mdc.ripple.MDCRipple.attachTo(links[i])
     }
     document.querySelector('.projects-button').addEventListener('click', (e) => {
-        document.querySelector('.buffer-projects').scrollIntoView({behavior: 'smooth'});
+        document.querySelector('.projects').scrollIntoView({behavior: 'smooth'});
     })
     document.querySelector('.about-button').addEventListener("click", function (e) {
         document.querySelector('.about').scrollIntoView({behavior: 'smooth'});
