@@ -83,6 +83,7 @@ header .mdc-button {
 .hero .desc {
     font-size: 18px;
     letter-spacing: 1px;
+    font-weight: 300;
 }
 
 .hero .title {
