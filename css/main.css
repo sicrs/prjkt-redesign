@@ -103,6 +103,8 @@ header .mdc-button {
 
 .hero .links .mdc-button {
     margin: 16px 8px;
+    --mdc-theme-primary: #30A0A0;
+    color: #EEEEEE
 }
 /*
 .product-container {
