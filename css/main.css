@@ -127,8 +127,7 @@ header .mdc-button {
 
 /*PROJECTS*/
 .projects {
-    margin-top: 64px;
-    padding: 0px 2.5vw;
+    padding: 80px 2.5vw 0px;
 }
 
 .projects h1 {
