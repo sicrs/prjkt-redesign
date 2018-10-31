@@ -101,6 +101,20 @@ window.onscroll = () => {
                 //nothing
             }
             */
+            let select = document.querySelectorAll('.about-special');
+            let i = 0;
+            function loop() {
+                setTimeout(function () {
+                    select[i].classList.add('about-special-selected');
+                    i ++;
+                    if (i < select.length) {
+                        loop()
+                    };
+                }, 25)
+            }
+            if (!select[0].classList.contains('about-special-selected')) {
+                loop()
+            }
             document.body.classList.remove('theme-secondary');
             document.body.classList.add('theme-primary');
         }
@@ -118,7 +132,12 @@ const init = () => {
 
     let links = document.querySelectorAll('.mdc-icon-button')
     for (let i = 0; i < links.length; i++) {
-        mdc.ripple.MDCRipple.attachTo(links[i])
+        mdc.ripple.MDCRipple.attachTo(links[i]);
+    }
+
+    let cards = document.querySelectorAll('.mdc-card')
+    for (let i = 0; i < cards.length; i++) {
+        mdc.ripple.MDCRipple.attachTo(cards[i]);
     }
     document.querySelector('.projects-button').addEventListener('click', (e) => {
         document.querySelector('.projects').scrollIntoView({behavior: 'smooth'});
@@ -126,7 +145,9 @@ const init = () => {
     document.querySelector('.about-button').addEventListener("click", function (e) {
         document.querySelector('.about').scrollIntoView({behavior: 'smooth'});
     })
-
+    document.querySelector('.team-button').addEventListener('click', function() {
+        document.querySelector('.team').scrollIntoView({behavior: 'smooth'})
+    })
 }
 
 function isElementInViewport (el) {
