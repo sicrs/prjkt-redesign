@@ -35,7 +35,6 @@ window.onscroll = () => {
         }
         */
         document.body.classList.remove('theme-secondary');
-        document.body.classList.add('theme-primary');
         document.querySelector('.projects-button').classList.remove('active')
     } else {
         if (isElementInViewport(document.querySelector('.projects-header')) === true) {
@@ -115,8 +114,18 @@ window.onscroll = () => {
             if (!select[0].classList.contains('about-special-selected')) {
                 loop()
             }
+            
             document.body.classList.remove('theme-secondary');
+            document.body.classList.remove('theme-tertiary');
             document.body.classList.add('theme-primary');
+        } else if (isElementInViewport(document.querySelector('.team-header'))) {
+            if (document.querySelector('.active')) {
+                document.querySelector('.active').classList.remove('active')
+            }
+            document.querySelector('.team-button').classList.add('active');
+            document.body.classList.remove('theme-primary');
+            document.body.classList.remove('theme-secondary');
+            document.body.classList.add('theme-tertiary');
         }
     }
 };

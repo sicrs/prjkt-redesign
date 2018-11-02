@@ -39,28 +39,28 @@ html {
 
 body {
     font-family: 'Roboto';
+    --mdc-theme-primary: #FFFFFF;
+    --mdc-theme-on-primary: #000000;
 }
 
 .theme-primary {
-    --mdc-theme-primary: #FFFFFF;
-    --mdc-theme-on-primary: #000000;
     --mdc-theme-secondary: #4885ed;
-    --mdc-theme-on-secondary: #616161;
 }
 
 .theme-secondary {
-    --mdc-theme-primary: #FFFFFF;
-    --mdc-theme-on-primary: #000000;
     --mdc-theme-secondary: #f44336;
-    --mdc-theme-on-secondary: #EEEEEE;
+}
+
+.theme-tertiary {
+    --mdc-theme-secondary: #A89058;
 }
 
 .mdc-top-app-bar {
-    color: var(--mdc-theme-on-primary);
+    color: #000000;
 }
 
 header .mdc-button {
-    --mdc-theme-primary: var(--mdc-theme-on-primary);
+    --mdc-theme-primary: #344955;
 }
 
 .mdc-top-app-bar__section--align-end button {
@@ -199,8 +199,8 @@ header .mdc-button {
 }
 
 .about-special-selected {
-    background-color: var(--mdc-theme-secondary);
-    color: var(--mdc-theme-primary);
+    background-color: #4885ed;
+    color: #ffffff;
 }
 
 /*TEAM*/
