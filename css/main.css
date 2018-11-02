@@ -6,12 +6,12 @@
     .desktop {
         visibility: hidden
     }
-    .mdc-layout-grid__inner {
-        align-items: center;
-    }
     .about-content {
         font-size: 8vw;
-        padding: 0 5vw 64px;
+        padding: 0 3vw 64px;
+    }
+    .footer-inner {
+        padding: 32px 1.5vw 32px;
     }
 }
 
@@ -25,6 +25,9 @@
     .about-content {
         font-size: 4vw;
         padding: 0 12.5vw 64px;
+    }
+    .footer-inner {
+        padding: 32px 5vw 32px;
     }
 }
 
@@ -204,6 +207,10 @@ header .mdc-button {
 }
 
 /*TEAM*/
+.team .mdc-layout-grid__inner {
+    align-content: center
+}
+
 .team .mdc-layout-grid__cell {
     margin: 16px;
 }
@@ -247,27 +254,34 @@ header .mdc-button {
 }
 
 /*FOOTER*/
-.footer {
-    background-color: #e0e0e0;
+.footer .container {
+    padding: 32px 5vw 16px;
 }
 
-.footer .container {
-    padding: 32px 64px;
+.footer hr {
+    color: #eeeeee;
 }
 
 .footer h2 {
     font-family: 'Roboto Mono';
+    color: #757575;
+    font-size: 18px;
+    margin-bottom: 8px
+}
+
+.footer h2::after {
+    content: '\AC'
 }
 
 .footer ul {
     list-style-type: none;
     align-items: center;
-    padding: 32px 0;
-    display: flex
+    display: flex;
 }
 
 .footer li {
-    font-size: 16px;
+    font-size: .875rem;
+    font-family: 'Roboto Mono'
 }
 
 .footer li::after {
@@ -282,5 +296,5 @@ header .mdc-button {
 .footer ul a {
     text-decoration: none;
     text-transform: none;
-    color: #424242;
+    color: #000000;
 }
