@@ -1,7 +1,5 @@
 window.onload = () => {
     init()
-    //make sure top-app-bar title isnt visible onload
-    isElementInViewport(document.querySelector('.title')) ? anime({targets: '.mdc-top-app-bar__title', color: '#FFF'}) : anime({targets: '.mdc-top-app-bar__title', color: '#000'}) 
 }
 
 window.onscroll = () => {
@@ -36,7 +34,9 @@ window.onscroll = () => {
         */
         document.body.classList.remove('theme-secondary');
         document.querySelector('.projects-button').classList.remove('active')
+        document.querySelector('.mdc-top-app-bar__title').classList.add('invisible')
     } else {
+        document.querySelector('.mdc-top-app-bar__title').classList.remove('invisible')
         if (isElementInViewport(document.querySelector('.projects-header')) === true) {
             if (document.querySelector('.active')) {
                 document.querySelector('.active').classList.remove('active')
