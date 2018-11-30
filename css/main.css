@@ -1,5 +1,5 @@
 /*RULES*/
-@media (max-width: 479px) {
+@media (max-width: 599px) {
     .phone {
         visibility: visible
     }
@@ -13,9 +13,12 @@
     .footer-inner {
         padding: 32px 1.5vw 32px;
     }
+    .mdc-tab {
+        height: 56px;
+    }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 600px) {
     .phone {
         visibility: hidden
     }
@@ -28,6 +31,9 @@
     }
     .footer-inner {
         padding: 32px 5vw 32px;
+    }
+    .mdc-tab {
+        height: 64px;
     }
 }
 
@@ -44,18 +50,6 @@ body {
     font-family: 'Roboto';
     --mdc-theme-primary: #FFFFFF;
     --mdc-theme-on-primary: #000000;
-}
-
-.theme-primary {
-    --mdc-theme-secondary: #4885ed;
-}
-
-.theme-secondary {
-    --mdc-theme-secondary: #f44336;
-}
-
-.theme-tertiary {
-    --mdc-theme-secondary: #A89058;
 }
 
 .mdc-top-app-bar {
@@ -302,4 +296,22 @@ header .mdc-button {
 
 .invisible {
     visibility: hidden;
+}
+
+.mdc-tab-bar {
+    --mdc-theme-primary: #4885ed;
+    width: inherit
+}
+
+.mdc-tab {
+    font-family: 'Roboto Mono';
+    font-weight: 700;
+}
+
+.mdc-tab-bar button {
+    margin: 0px;
+}
+
+.mdc-top-app-bar__section--align-end {
+    padding: 0px 12px;
 }
