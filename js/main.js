@@ -7,11 +7,11 @@ window.onscroll = () => {
     if (isElementInViewport(document.querySelector('.title')) === true) {
         tabbar.foundation_.adapter_.setActiveTab(0)
     } else {
-        if (isElementInViewport(document.querySelector('.projects-header')) === true) {
+        if (isElementInViewport(document.querySelector('.projects-header')) || isElementInViewport(document.querySelectorAll('.project-item')[document.querySelectorAll('.project-item').length - 1])) {
             tabbar.foundation_.adapter_.setActiveTab(1)
-        } else if (isElementInViewport(document.querySelector('.about-header')) && isElementInViewport(document.querySelector('.team-header'))) {
+        } else if (isElementInViewport(document.querySelector('.about-header')) || isElementInViewport(document.querySelector('.about'))) {
             tabbar.foundation_.adapter_.setActiveTab(2)
-        } else if (isElementInViewport(document.querySelector('.team-header'))) {
+        } else if (isElementInViewport(document.querySelector('.team-header')) || isElementInViewport(document.querySelector('.team'))) {
             tabbar.foundation_.adapter_.setActiveTab(3)
         }
     }
