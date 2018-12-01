@@ -19,6 +19,9 @@
     :root {
         --header-h: 56px
     }
+    .footer-content {
+        flex-direction: column;
+    }
 }
 
 @media (min-width: 600px) {
@@ -44,6 +47,12 @@
 * {
     margin: 0px;
     padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: none;
+    color: #000
 }
 
 html {
@@ -212,7 +221,7 @@ header .mdc-button {
 }
 
 .team .mdc-layout-grid__cell {
-    margin: 16px;
+    margin: 8px;
 }
 
 .mdc-card {
@@ -254,49 +263,54 @@ header .mdc-button {
 }
 
 /*FOOTER*/
-.footer .container {
-    padding: 32px 5vw 16px;
+.footer {
+    padding: 48px 64px 0;
+    background-color: #f1f3f4;
 }
 
-.footer hr {
-    color: #eeeeee;
+.footer, .footer-content {
+    display: flex
 }
 
-.footer h2 {
-    font-family: 'Roboto Mono';
-    color: #757575;
-    font-size: 18px;
-    margin-bottom: 8px
+.footer-wrapper {
+    max-width: 700px;
+    margin:  0px auto;
+    padding: 16px 0px;    
 }
 
-.footer h2::after {
-    content: '\AC'
+.footer-logo {
+    background-image: url(../assets/images/teamlogo.png);
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+    margin-right: 32px;
 }
 
-.footer ul {
+.footer-link-container {
+    padding-top: 16px;
+}
+
+.footer-link-container ul {
     list-style-type: none;
     align-items: center;
     display: flex;
 }
 
-.footer li {
+.footer-link-container li {
     font-size: .875rem;
-    font-family: 'Roboto Mono'
+    font-family: 'Roboto';
 }
 
-.footer li::after {
+.footer-link-container li::after {
     content: '/';
     margin: 0 8px;
 }
 
-.footer li:nth-child(4)::after {
-    content: ''
-}
-
-.footer ul a {
-    text-decoration: none;
-    text-transform: none;
-    color: #000000;
+.footer-link-container li:nth-child(4)::after {
+    content: '';
+    margin: 0 8px;
 }
 
 .invisible {
