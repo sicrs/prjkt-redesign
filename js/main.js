@@ -42,15 +42,15 @@ const init = () => {
     })
     navButtons[1].addEventListener('click', (e) => {
         document.querySelector('.projects').scrollIntoView({behavior: 'smooth', block: 'start'});
-        setTimeout(tabbar.foundation_.adapter_.setActiveTab(1), 200)
+        //setTimeout(tabbar.foundation_.adapter_.setActiveTab(1), 200)
     })
     navButtons[2].addEventListener("click", function (e) {
         document.querySelector('.about').scrollIntoView({behavior: 'smooth', block: 'start'});
-        setTimeout(tabbar.foundation_.adapter_.setActiveTab(2), 200)
+        //setTimeout(tabbar.foundation_.adapter_.setActiveTab(2), 200)
     })
     navButtons[3].addEventListener('click', function() {
         document.querySelector('.team').scrollIntoView({behavior: 'smooth', block: 'start'});
-        setTimeout(tabbar.foundation_.adapter_.setActiveTab(3), 200)
+        //setTimeout(tabbar.foundation_.adapter_.setActiveTab(3), 200)
     })
 }
 
