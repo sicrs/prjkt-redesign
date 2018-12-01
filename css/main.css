@@ -275,7 +275,7 @@ header .mdc-button {
 .footer-wrapper {
     max-width: 700px;
     margin:  0px auto;
-    padding: 16px 0px;    
+    padding: 16px 0px 24px;    
 }
 
 .footer-logo {
