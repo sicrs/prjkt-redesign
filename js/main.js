@@ -5,14 +5,14 @@ window.onload = () => {
 
 window.onscroll = () => {
     if (isElementInViewport(document.querySelector('.title')) === true) {
-        tabbar.foundation_.adapter_.setActiveTab(0)
+        tabbar.foundation_.activateTab(0)
     } else {
         if (isElementInViewport(document.querySelector('.projects-header')) || isElementInViewport(document.querySelectorAll('.project-item')[document.querySelectorAll('.project-item').length - 1])) {
-            tabbar.foundation_.adapter_.setActiveTab(1)
+            tabbar.foundation_.activateTab(1)
         } else if (isElementInViewport(document.querySelector('.about-header')) || isElementInViewport(document.querySelector('.about'))) {
-            tabbar.foundation_.adapter_.setActiveTab(2)
+            tabbar.foundation_.activateTab(2)
         } else if (isElementInViewport(document.querySelector('.team-header')) || isElementInViewport(document.querySelector('.team'))) {
-            tabbar.foundation_.adapter_.setActiveTab(3)
+            tabbar.foundation_.activateTab(3)
         }
     }
 };
@@ -42,15 +42,15 @@ const init = () => {
     })
     navButtons[1].addEventListener('click', (e) => {
         document.querySelector('.projects').scrollIntoView({behavior: 'smooth', block: 'start'});
-        //setTimeout(tabbar.foundation_.adapter_.setActiveTab(1), 200)
+        //setTimeout(tabbar.foundation_.activateTab(1), 200)
     })
     navButtons[2].addEventListener("click", function (e) {
         document.querySelector('.about').scrollIntoView({behavior: 'smooth', block: 'start'});
-        //setTimeout(tabbar.foundation_.adapter_.setActiveTab(2), 200)
+        //setTimeout(tabbar.foundation_.activateTab(2), 200)
     })
     navButtons[3].addEventListener('click', function() {
         document.querySelector('.team').scrollIntoView({behavior: 'smooth', block: 'start'});
-        //setTimeout(tabbar.foundation_.adapter_.setActiveTab(3), 200)
+        //setTimeout(tabbar.foundation_.activateTab(3), 200)
     })
 }
 
