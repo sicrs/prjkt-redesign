@@ -13,8 +13,11 @@
     .footer-inner {
         padding: 32px 1.5vw 32px;
     }
-    .mdc-tab {
-        height: 56px;
+    .mdc-tab-bar {
+        margin: 0 auto;
+    }
+    :root {
+        --header-h: 56px
     }
 }
 
@@ -32,9 +35,10 @@
     .footer-inner {
         padding: 32px 5vw 32px;
     }
-    .mdc-tab {
-        height: 64px;
+    :root {
+        --header-h: 64px
     }
+    
 }
 
 * {
@@ -115,14 +119,15 @@ header .mdc-button {
 }
 /*PROJECTS*/
 .section {
-    padding: 0px 2.5vw 32px;
+    padding: 16px 2.5vw 32px;
 }
 
 .section-header {
     font-family: 'Roboto Mono';
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     padding: 96px 32px 48px;
+    text-transform: uppercase;
 }
 
 .projects .mdc-layout-grid__inner {
@@ -306,6 +311,7 @@ header .mdc-button {
 .mdc-tab {
     font-family: 'Roboto Mono';
     font-weight: 700;
+    height: var(--header-h)
 }
 
 .mdc-tab-bar button {
