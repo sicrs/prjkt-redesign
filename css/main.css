@@ -73,7 +73,7 @@ header .mdc-button {
     --mdc-theme-primary: #344955;
 }
 
-.mdc-top-app-bar__section--align-end button {
+.mdc-top-app-bar__section button {
     margin-left: 8px;
     margin-right: 8px;
 }
@@ -332,6 +332,6 @@ header .mdc-button {
     margin: 0px;
 }
 
-.mdc-top-app-bar__section--align-end {
+.mdc-top-app-bar__section {
     padding: 0px 12px;
 }
