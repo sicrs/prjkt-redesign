@@ -1,337 +1,184 @@
-/*RULES*/
 @media (max-width: 599px) {
-    .phone {
-        visibility: visible
+    .main {
+        width: 100vw;
     }
     .desktop {
-        visibility: hidden
+        display: none;
     }
-    .about-content {
-        font-size: 8vw;
-        padding: 0 3vw 64px;
+    .phone {
+        display: block;
     }
-    .footer-inner {
-        padding: 32px 1.5vw 32px;
+    .project {
+        padding: 8px
     }
-    .mdc-tab-bar {
-        margin: 0 auto;
+    .related-card {
+        margin: 0 24px;
     }
-    :root {
-        --header-h: 56px
+    .related-card--main__image {
+        width: 56px;
+        height: 56px;
     }
-    .footer-content {
-        flex-direction: column;
+    .carousel-item {
+        min-width: 75% !important;
     }
 }
 
 @media (min-width: 600px) {
-    .phone {
-        visibility: hidden
+    .main {
+        width: 70vw;
+        margin: 0 auto;
     }
     .desktop {
-        visibility: visible
+        display: block;
     }
-    .about-content {
-        font-size: 4vw;
-        padding: 0 12.5vw 64px;
+    .mobile {
+        display: none
     }
-    .footer-inner {
-        padding: 32px 5vw 32px;
+    .project {
+        padding: 16px;
     }
-    :root {
-        --header-h: 64px
+    .related-card--main {
+        display: flex
     }
-    
+    .related-card--main__image {
+        min-width: 56px;
+        min-height: 56px;
+    }
+    .carousel-item {
+        min-width: 33% !important;
+    }
 }
 
-* {
-    margin: 0px;
-    padding: 0px;
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/manrope-semibold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700; 
 }
 
-a {
-    text-decoration: none;
-    text-transform: none;
-    color: #000
+:root {
+    --mdc-theme-primary: #1a73e8;
+    --mdc-theme-secondary: #FFF;
+    --mdc-theme-on-secondary: var(--mdc-theme-primary)
 }
-
-html {
-    overflow-x: hidden
-}
-
 body {
-    font-family: 'Roboto';
-    --mdc-theme-primary: #FFFFFF;
-    --mdc-theme-on-primary: #000000;
+    margin: 0px;
 }
-
-.mdc-top-app-bar {
-    color: #000000;
-}
-
-header .mdc-button {
-    --mdc-theme-primary: #344955;
-}
-
-.mdc-top-app-bar__section button {
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-.mdc-top-app-bar__title {
-    font-family: 'Roboto Mono';
-    color: #000;
-}
-
-.mdc-top-app-bar .active {
-    --mdc-theme-primary: var(--mdc-theme-secondary)
-}
-
-.hero {
-    background-size: cover;
-    background-position: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-image: url(../assets/images/bg.jpg);
-    background-attachment: fixed;
-}
-
-.hero .container {
-    padding: 20vh 15vw 0;
-    height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35));
-    color: #EEEEEE;
-}
-
-.hero.container .title, .desc {
-    background: rgba(0, 0, 0, 0);
-}
-
-.hero .desc {
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-weight: 300;
-}
-
-.hero .title {
-    font-size: 48px;
-    font-weight: 500;
-    font-family: 'Roboto Mono';
-}
-
-.hero .links {
-    padding-top: 28px;
-}
-
-.hero .links .mdc-button {
-    margin: 8px 8px;
-}
-/*PROJECTS*/
-.section {
-    padding: 16px 2.5vw 32px;
-}
-
-.section-header {
-    font-family: 'Roboto Mono';
-    font-weight: 500;
-    text-align: center;
-    padding: 96px 32px 48px;
-    text-transform: uppercase;
-}
-
-.projects .mdc-layout-grid__inner {
-    padding: 0 2.5vw;
-}
-
-.project-item {
-    padding : 32px;
-    height: auto;
-    margin: 0 16px;
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-.project-image::before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-top: 66.67%;
-}
-
-.project-item:hover {
-    box-shadow: 0 3px 3px -2px rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 1px 8px 0 rgba(0,0,0,.12)
-}
-
-.project-image {
-    position: relative;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../assets/images/test.png);
-}
-
-.project-item a {
+a {
+    color: inherit;
     text-transform: none;
     text-decoration: none;
-    color: #424242;
-    border-radius: 8px;
+}
+.section--header {
+    text-align: center;
+    font-family: 'Manrope'
+}
+/*HERO*/
+.hero {
+    text-align: center;
+}
+.hero h1 {
+    letter-spacing: 1px;
+    font-weight: 500
 }
 
-.project-content {
-    margin-top: 24px;
+/*PROJECTS*/
+.mdc-layout-grid__cell:not(.carousel-item) {
+    height: 40vh
 }
-
-.project-heading {
-    font-size: 1rem;
-    font-family: 'Roboto';
-    font-weight: 500;
-    letter-spacing: .75px;
+.project {
+    margin: auto 0;
+    height: auto
 }
-
-.project-desc {
-    margin-top: 8px;
+.project * {
+    text-align: center;
+}
+.project--image::before {
+    content: '';
+    padding-top: 100%;
+    width: 48px
+}
+.project--image {
+    width: 48px;
+    height: 48px;
+    margin: 0 calc((100% - 48px) / 2);
+    background-position: center;
+    background-size: cover;
+}
+.project--header {
+    padding: 16px 0px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: .0275rem;
+    font-family: 'Manrope'
+}
+.project--description {
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+    color: #666666;
+    padding: 0 0 16px;
+    width: 80%;
+    margin: 0 auto
+}
+.project--suggestions__text {
     font-size: 14px;
 }
-
-.project-tag {
-    font-size: .875rem;
-    font-family: 'Roboto Mono';
-    margin-top: 16px;
-    font-weight: 400;
+.project--suggestions__chips {
+    display: inline;
 }
-
-.project-tag i {
-    margin-right: 8px;
-    vertical-align: middle;
+.project--suggestions__chips .mdc-button{
+    margin: 4px 4px;
 }
-/*About*/
-.about-content {
-    text-align: center;
-    font-weight: 300;
-}
-
-.about-special-selected {
-    background-color: #4885ed;
-    color: #ffffff;
-}
-
-/*TEAM*/
-.team .mdc-layout-grid__inner {
-    align-content: center
-}
-
-.team .mdc-layout-grid__cell {
-    margin: 8px;
-}
-
-.mdc-card {
-    height: auto;
-    --mdc-theme-primary: var(--mdc-theme-secondary);
-    text-transform: none;
-    text-decoration: none;
-}
-
-.card-primary {
+.related-card {
     padding: 16px;
+    width: auto;
+    border-radius: 4px;
 }
-
-.card-primary h2 {
-    font-family: 'Roboto Mono';
-    color: #000
-}
-
-.card-primary h3 {
-    color: rgba(0, 0, 0, .54)
-}
-
-.card-secondary {
-    padding: 0 16px 16px;
-    color: rgba(0, 0, 0, .54)
-}
-
-.mdc-card .tag {
-    padding: 0 16px 16px;
-    font-family: 'Roboto Mono';
-    font-size: .875rem;
-    font-weight: 400;
-    color: rgb(66, 66, 66);
-}
-
-.mdc-card .tag i {
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-/*FOOTER*/
-.footer {
-    padding: 48px 64px 0;
-    background-color: #f1f3f4;
-}
-
-.footer, .footer-content {
-    display: flex
-}
-
-.footer-wrapper {
-    max-width: 700px;
-    margin:  0px auto;
-    padding: 16px 0px 24px;    
-}
-
-.footer-logo {
-    background-image: url(../assets/images/teamlogo.png);
-    width: 64px;
-    height: 64px;
+.related-card--main__image {
+    margin: auto 16px auto 0;
     background-size: cover;
-    background-position: center;
+    background-position: center; 
+}
+.related-card--url {
+    color: #666666;
+    padding: 12px 0 0;
+}
+.related-card--url i {
     vertical-align: middle;
-    margin-right: 32px;
+    padding-right: 8px;
 }
 
-.footer-link-container {
-    padding-top: 16px;
+/*CAROUSEL - TEMP*/
+.carousel {
+    overflow-x: hidden;
+    overflow-y: visible;
 }
-
-.footer-link-container ul {
-    list-style-type: none;
-    align-items: center;
+.carousel {
+    padding: 16px 0;
+}
+.carousel-outer {
+    overflow: hidden;
+}
+.carousel .mdc-layout-grid__inner {
+    transition: transform .5s cubic-bezier(.4,0,.2,1);
     display: flex;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    align-items: flex-start;
+    flex-flow: row;
 }
 
-.footer-link-container li {
-    font-size: .875rem;
-    font-family: 'Roboto';
+.carousel-control {
+    padding: 16px 16px;
+    display: inline-block;
+    width: calc(100% - 32px);
 }
-
-.footer-link-container li::after {
-    content: '/';
-    margin: 0 8px;
+.carousel-control--left {
+    float: left;
+    margin: 0 32px
 }
-
-.footer-link-container li:nth-child(4)::after {
-    content: '';
-    margin: 0 8px;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.mdc-tab-bar {
-    --mdc-theme-primary: #4885ed;
-    width: inherit
-}
-
-.mdc-tab {
-    font-family: 'Roboto Mono';
-    font-weight: 700;
-    height: var(--header-h)
-}
-
-.mdc-tab-bar button {
-    margin: 0px;
-}
-
-.mdc-top-app-bar__section {
-    padding: 0px 12px;
+.carousel-control--right {
+    float: right;
+    margin: 0 32px
 }

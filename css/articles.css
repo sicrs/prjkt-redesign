@@ -1,0 +1,158 @@
+@media (max-width: 599px) {
+    .footer-inner {
+        padding: 32px 1.5vw 32px;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 600px) {
+    .footer-inner {
+        padding: 32px 5vw 32px;
+    }
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/manrope-semibold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700; 
+}
+body {
+    margin: 0;
+    --mdc-theme-primary: #1a73e8;
+    --mdc-theme-secondary: #fff;
+    --mdc-text-on-secondary: #000;
+}
+a {
+    color: inherit;
+    text-transform: none;
+    text-decoration: none;
+}
+header {
+    --mdc-theme-primary: var(--mdc-theme-secondary);
+    --mdc-theme-on-primary: #1a73e8;
+}
+.mdc-top-app-bar__title {
+    color: var(--mdc-text-on-secondary)
+}
+img.team-logo {
+    vertical-align: middle;
+}
+.body-content, .mdc-top-app-bar__row {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.body-content {
+    min-height: calc(100vh - 174px - 64px)
+}
+.body-hero {
+    padding: 16px;
+}
+
+.section-articles {
+    margin-top: 48px;
+}
+.article-wrapper {
+    padding: 16px;
+}
+.article-date {
+    font-family: 'Roboto Mono';
+    font-size: 16px;
+    color: #5f6368;
+}
+.article-title {
+    font-family: 'Manrope';
+    font-size: 2rem;
+    padding-bottom: 8px; 
+}
+.article-desc {
+    font-size: 1rem;
+}
+.article-author {
+    display: inline-flex;
+    padding: 16px 0;
+}
+.article-author--text {
+    font-family: 'Roboto Mono';
+    font-size: 14px;
+    padding: 0px 16px;
+    height: auto;
+    margin: auto 0px;
+}
+.article-author--image {
+    width: 40px;
+    height: 40px;
+    border-radius: 32px;
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    background-image: url(../assets/images/image08.jpg)
+}
+.tag {
+    border-radius: 16px;
+    background-color: #e0e0e0;
+    color: rgba(0,0,0,0.87);
+    font-family: 'Roboto Mono';
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    letter-spacing: .01786em;
+    height: 32px;
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 7px 12px;
+    outline: none;
+    overflow: hidden;
+    cursor: default;
+    margin: 0 4px;
+}
+
+/*FOOTER*/
+.footer {
+    padding: 48px 64px 0;
+    background-color: #f1f3f4;
+}
+.footer, .footer-content {
+    display: flex
+}
+.footer-wrapper {
+    max-width: 700px;
+    margin:  0px auto;
+    padding: 16px 0px 24px;    
+}
+.footer-logo {
+    background-image: url(../assets/images/teamlogo.png);
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    background-position: center;
+    vertical-align: middle;
+    margin-right: 32px;
+}
+.footer-link-container {
+    padding-top: 16px;
+}
+.footer-link-container ul {
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    padding-left: 0px;
+}
+.footer-link-container li {
+    font-size: .875rem;
+    font-family: 'Roboto';
+}
+.footer-link-container li::after {
+    content: '/';
+    margin: 0 8px;
+}
+.footer-link-container li:nth-child(4)::after {
+    content: '';
+    margin: 0 8px;
+}

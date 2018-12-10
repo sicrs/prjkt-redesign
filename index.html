@@ -1,450 +1,232 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>prjkt.</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/material-components-web.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <script src="js/material-components-web.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body class="mdc-typography">
+        <div class="main">
+            <section class="section hero">
+                <h1 class=" section--header mdc-typography--headline3">projekt.</h1>
+                <h3 class="mdc-typography--headline5">Out-of-the-box community engaged development</h3>
+            </section>
+            <!--PROJECTS-->
+            <section class="section projects">
+                <h1 class="section--header mdc-typography--headline3">Projects</h1>
+                <!--DESKTOP LAYOUT-->
+                <div class="mdc-layout-grid desktop">
+                    <div class="mdc-layout-grid__inner">
 
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>prjkt.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                            <div class="project">
+                                <div class="project--image" style="background-image: url(assets/images/ic_play_store-1.png)"></div>
+                                <div class="project--header mdc-typography--headline6">substratum</div>
+                                <div class="project--description">Flexible and dynamic custom theming powered by OMS</div>
+                                <div class="project--suggestions">
+                                    <div class="project--suggestions__chips">
+                                        <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.substratum" target="_blank">Download</a>
+                                        <a class="mdc-button mdc-button--unelevated" href="https://t.me/substratum" target="_blank">Support</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="css/material-components-web.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                            <div class="project">
+                                <div class="project--image" style="background-image: url(assets/images/ic_play_store.png)"></div>
+                                <div class="project--header mdc-typography--headline6">andromeda</div>
+                                <div class="project--description">Enable rootless mode for substratum on Android 8.x devices</div>
+                                <div class="project--suggestions">
+                                    <div class="project--suggestions__chips">
+                                        <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.andromeda" target="_blank">Purchase</a>
+                                        <a class="mdc-button mdc-button--unelevated" href="https://t.me/substratum" target="_blank">Support</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-    <script src="js/material-components-web.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/smoothscroll.js"></script>
-</head>
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                            <div class="project">
+                                <div class="project--image" style="background-image: url(assets/images/2017-03-05.png)"></div>
+                                <div class="project--header mdc-typography--headline6">substratum resources</div>
+                                <div class="project--description">Platform side changes to get substratum and OMS to work together</div>
+                                <div class="project--suggestions">
+                                    <div class="project--suggestions__chips">
+                                        <a class="mdc-button" href="https://github.com/SubstratumResources" target="_blank">Explore</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-<body class="mdc-typography theme-primary">
-        <header class="mdc-top-app-bar mdc-top-app-bar--fixed animatables">
-            <div class="mdc-top-app-bar__row">
-                <section class="mdc-top-app-bar__section">
-                        <div class="mdc-tab-bar">
-                                <div class="mdc-tab-scroller">
-                                    <div class="mdc-tab-scroller__scroll-area">
-                                        <div class="mdc-tab-scroller__scroll-content">
-                                            <button class="mdc-tab mdc-tab--active ">
-                                                <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__icon material-icons" aria-hidden="true">arrow_upward</span>
-                                                </span>
-                                                <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                                </span>
-                                                <span class="mdc-tab__ripple"></span>
-                                            </button>
-                                            <button class="mdc-tab ">
-                                                <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label">Projects</span>
-                                                </span>
-                                                <span class="mdc-tab-indicator">
-                                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                                </span>
-                                                <span class="mdc-tab__ripple"></span>
-                                            </button>
-                                            <button class="mdc-tab ">
-                                                <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label">About</span>
-                                                </span>
-                                                <span class="mdc-tab-indicator">
-                                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                                </span>
-                                                <span class="mdc-tab__ripple"></span>
-                                            </button>
-                                            <button class="mdc-tab ">
-                                                <span class="mdc-tab__content">
-                                                    <span class="mdc-tab__text-label">Team</span>
-                                                </span>
-                                                <span class="mdc-tab-indicator">
-                                                    <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                                </span>
-                                                <span class="mdc-tab__ripple"></span>
-                                            </button>
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                            <div class="project">
+                                <div class="project--image" style="background-image: url(assets/images/sungstratum.jpeg)"></div>
+                                <div class="project--header mdc-typography--headline6">sungstratum</div>
+                                <div class="project--description">Enable substratum for Samsung users on Android 7.x devices </div>
+                                <div class="project--suggestions">
+                                    <div class="project--suggestions__chips">
+                                        <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.sungstratum" target="_blank">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                            <div class="project">
+                                <div class="project--image" style="background-image: url(assets/images/launcher_icon_rounded.png)"></div>
+                                <div class="project--header mdc-typography--headline6">hyperion</div>
+                                <div class="project--description">A beautiful, feature-filled launcher experience</div>
+                                <div class="project--suggestions">
+                                    <div class="project--suggestions__chips">
+                                        <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.launcher" target="_blank">Download</a>
+                                        <a class="mdc-button mdc-button--unelevated" href="https://t.me/hyperionhub" target="_blank">Support</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                            <a class="related-card mdc-card mdc-elevation--z4 mdc-ripple-surface" href="">
+                                <div class="related-card--main">
+                                    <div class="related-card--main__image" style="background-image: url(assets/images/dock.png)"></div>
+                                    <div class="related-card--main__text">
+                                        <div class="mdc-typography--overline">Related</div>
+                                        <div class="related-card--main__text-title mdc-typography--body1">Hyperion Dock</div>
+                                        <div class="mdc-typography--body2">Enables the Google feed for hyperion</div>
+                                    </div>
+                                </div>
+                                <div class="related-card--url">
+                                    <i class="material-icons">open_in_new</i>
+                                    Download
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--MOBILE LAYOUT-->
+                <div class="carousel mobile">
+                    <div class="carousel-outer">
+                        <div class="mdc-layout-grid">
+                            <div class="mdc-layout-grid__inner carousel-scroller">
+
+                                <div class="carousel-item mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                    <div class="project">
+                                        <div class="project--image" style="background-image: url(assets/images/ic_play_store-1.png)"></div>
+                                        <div class="project--header mdc-typography--headline6">substratum</div>
+                                        <div class="project--description">Flexible and dynamic custom theming powered by OMS</div>
+                                        <div class="project--suggestions">
+                                            <!--<div class="project--suggestions__text mdc-typography--overline">Related</div>-->
+                                            <div class="project--suggestions__chips">
+                                                <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.substratum" target="_blank">Download</a>
+                                                <a class="mdc-button mdc-button--unelevated" href="https://t.me/substratum" target="_blank">Support</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="carousel-item mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                    <div class="project">
+                                        <div class="project--image" style="background-image: url(assets/images/ic_play_store.png)"></div>
+                                        <div class="project--header mdc-typography--headline6">andromeda</div>
+                                        <div class="project--description">Enable rootless mode for substratum on Android 8.x devices</div>
+                                        <div class="project--suggestions">
+                                            <!--<div class="project--suggestions__text mdc-typography--overline">Related</div>-->
+                                            <div class="project--suggestions__chips">
+                                                <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.andromeda" target="_blank">Purchase</a>
+                                                <a class="mdc-button mdc-button--unelevated" href="https://t.me/substratum" target="_blank">Support</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                    <div class="project">
+                                        <div class="project--image" style="background-image: url(assets/images/2017-03-05.png)"></div>
+                                        <div class="project--header mdc-typography--headline6">substratum resources</div>
+                                        <div class="project--description">Platform side changes to get substratum and OMS to work together</div>
+                                        <div class="project--suggestions">
+                                            <!--<div class="project--suggestions__text mdc-typography--overline">Related</div>-->
+                                            <div class="project--suggestions__chips">
+                                                <a class="mdc-button" href="https://github.com/SubstratumResources" target="_blank">Explore</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                    <div class="project">
+                                        <div class="project--image" style="background-image: url(assets/images/sungstratum.jpeg)"></div>
+                                        <div class="project--header mdc-typography--headline6">sungstratum</div>
+                                        <div class="project--description">Enable substratum for Samsung users on Android 7.x devices </div>
+                                        <div class="project--suggestions">
+                                            <!--<div class="project--suggestions__text mdc-typography--overline">Related</div>-->
+                                            <div class="project--suggestions__chips">
+                                                <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.sungstratum" target="_blank">Learn More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                    <div class="project">
+                                        <div class="project--image" style="background-image: url(assets/images/launcher_icon_rounded.png)"></div>
+                                        <div class="project--header mdc-typography--headline6">hyperion</div>
+                                        <div class="project--description">A beautiful, feature-filled launcher experience</div>
+                                        <div class="project--suggestions">
+                                            <!--<div class="project--suggestions__text mdc-typography--overline">Related</div>-->
+                                            <div class="project--suggestions__chips">
+                                                <a class="mdc-button" href="https://play.google.com/store/apps/details?id=projekt.launcher" target="_blank">Download</a>
+                                                <a class="mdc-button mdc-button--unelevated" href="https://t.me/hyperionhub" target="_blank">Support</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="carousel-item mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+                                    <a class="related-card mdc-card mdc-elevation--z0 mdc-ripple-surface" href="">
+                                        <div class="related-card--main">
+                                            <div class="related-card--main__image" style="background-image: url(assets/images/dock.png)"></div>
+                                            <div class="related-card--main__text">
+                                                <div class="mdc-typography--overline">Related</div>
+                                                <div class="related-card--main__text-title mdc-typography--body1">Hyperion Dock</div>
+                                                <div class="mdc-typography--body2">Enables the Google feed for hyperion</div>
+                                            </div>
+                                        </div>
+                                        <div class="related-card--url">
+                                            <i class="material-icons">open_in_new</i>
+                                            Download
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                </section>
-            </div>
-        </header>
-        
-        <div class="main mdc-top-app-bar--fixed-adjust">
-            <div class="hero animatables">
-                <div class="hero container">
-                    <h1 class="hero desc mdc-typography--body2">Out-of-the-box community engaged development</h1>
-                    <h1 class="hero title">PRJKT.</h1>
-                    <div class="links">
-                        <a class="mdc-button mdc-button--raised" target="_blank" href="https://t.me/substratum">Telegram</a>
-                        <a class="mdc-button mdc-button--raised" target="_blank" href="https://forum.xda-developers.com/apps/substratum">XDA Developers</a>
-                        <a class="mdc-button mdc-button--raised" target="_blank" href="https://www.github.com/prjkt-io">Github</a>
-                        <a class="mdc-button mdc-button--raised" target="_blank" href="https://plus.google.com/communities/102261717366580091389">Google +</a>
+                            <!--END INNER GRID-->
+                        </div>
+
+                    </div>
+
+                    <div class="carousel-control">
+                        <button class="mdc-fab carousel-control--left mdc-fab--mini carousel-controls" aria-label="Favorite" onclick="projectCarousel.scrollLeft()">
+                            <span class="mdc-fab__icon material-icons">arrow_back</span>
+                        </button>
+                        <button class="mdc-fab carousel-control--right mdc-fab--mini carousel-controls" aria-label="Favorite" onclick="projectCarousel.scrollRight()">
+                            <span class="mdc-fab__icon material-icons">arrow_forward</span>
+                        </button>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="projects animatables mdc-layout-grid section">
-                <h1 class="mdc-typography__headline5 projects-header section-header">Projects</h1>
-
-                <div class="mdc-layout-grid__inner">
-
-                    <div class=" mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet">
-                        <div class="project-item">
-                            <a href="https://play.google.com/store/apps/details?id=projekt.substratum" target="_blank">
-
-                                <div class="project-image" style="background-image: url(assets/images/image19.png)"></div>
-                                <div class="project-content">
-                                    <div class="project-heading mdc-typography--overline">
-                                        substratum
-                                    </div>
-                                    <div class="project-desc">
-                                        Substratum utilises Sony's Overlay Manager Service as well as the deprecated
-                                        system - Runtime Resource Overlay - to provide flexible and dynamic
-                                        system-theming capabilities
-                                    </div>
-                                    <div class="project-tag url">
-                                        <i class="material-icons">open_in_new</i>
-                                        play.google.com
-                                    </div>
-                                </div>
-
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet">
-                        <div class="project-item">
-                            <a href="https://play.google.com/store/apps/details?id=projekt.andromeda" target="_blank">
-                                <div class="project-image" style="background-image: url(assets/images/image07.png)"></div>
-                                <div class="project-content">
-                                    <div class="project-heading mdc-typography--overline">
-                                        andromeda
-                                    </div>
-                                    <div class="project-desc">
-                                        Andromeda is a plugin for substratum that enables rootless mode on Android 8.x
-                                        devices.
-                                    </div>
-                                    <div class="project-tag url">
-                                        <i class="material-icons">open_in_new</i>
-                                        play.google.com
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet">
-                        <div class="project-item">
-                            <a href="https://github.com/SubstratumResources" target="_blank">
-                                <div class="project-image" style="background-image: url(assets/images/image20.png)"></div>
-                                <div class="project-content">
-                                    <div class="project-heading mdc-typography--overline">
-                                        substratum resources
-                                    </div>
-                                    <div class="project-desc">
-                                        A collection of repositories affiliating with the platform side changes to get
-                                        Substratum and OMS working in harmony.
-                                    </div>
-                                    <div class="project-tag url">
-                                        <i class="material-icons">open_in_new</i>
-                                        github.com
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet">
-                        <div class="project-item">
-                            <a href="https://play.google.com/store/apps/details?id=projekt.sungstratum" target="_blank">
-                                <div class="project-image" style="background-image: url(assets/images/image23.jpeg)"></div>
-                                <div class="project-content">
-                                    <div class="project-heading mdc-typography--overline">
-                                        sungstratum
-                                    </div>
-                                    <div class="project-desc">
-                                        An add-on to enable substratum for Samsung users on Android 7.x, regardless of
-                                        whether your device is rooted or not.
-                                    </div>
-                                    <div class="project-tag url">
-                                        <i class="material-icons">open_in_new</i>
-                                        play.google.com
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4-desktop mdc-layout-grid__cell--span-8-tablet">
-                        <div class="project-item">
-                            <a href="https://play.google.com/store/apps/details?id=projekt.launcher" target="_blank">
-                                <div class="project-image" style="background-image: url(assets/images/image21.png)"></div>
-                                <div class="project-content">
-                                    <div class="project-heading mdc-typography--overline">
-                                        hyperion
-                                    </div>
-                                    <div class="project-desc">
-                                        Providing a beautiful, yet feature-filled consolidated launcher experience.
-                                    </div>
-                                    <div class="project-tag url">
-                                        <i class="material-icons">open_in_new</i>
-                                        play.google.com
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            
-            <div class="about section">
-                <h1 class="about-header section-header">About</h1>
-                <p class="about-content">We aspire to develop Android applications that <span class="about-special">s</span><span class="about-special">e</span><span class="about-special">e</span><span class="about-special">k</span><span class="about-special"> </span><span class="about-special">a</span><span class="about-special">n</span><span class="about-special">d</span><span class="about-special"> </span><span class="about-special">c</span><span class="about-special">o</span><span class="about-special">n</span><span class="about-special">q</span><span class="about-special">u</span><span class="about-special">e</span><span class="about-special">r</span><span class="about-special"> </span><span class="about-special">i</span><span class="about-special">d</span><span class="about-special">e</span><span class="about-special">a</span><span class="about-special">s</span> that people believed to not be possible.</p>
-            </div>
-
-            <div class="team section mdc-layout-grid">
-                <h1 class="team-header section-header">Team</h1>
-                <div class="mdc-layout-grid__inner">
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:nicholas@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image08.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Nicholas Chum</h2>
-                                <h3 class="mdc-typography--subtitle2">nicholaschum</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                CTO, co-founder
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                nicholas@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:ivan@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image10.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Ivan Iskandar</h2>
-                                <h3 class="mdc-typography--subtitle2">iskandar1023</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Lead Platform and Backend Dev
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                ivan@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:harsh@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image11.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Harsh Shandilya</h2>
-                                <h3 class="mdc-typography--subtitle2">msfjarvis</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Lead Platform and Backend Dev
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                harsh@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:anas@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image12.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Anass Karbila</h2>
-                                <h3 class="mdc-typography--subtitle2">thecrazyskull</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Lead Platform and Backend Dev
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                anas@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:george@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image13.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">George Gian</h2>
-                                <h3 class="mdc-typography--subtitle2">KreAch3R</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Lead Platform and Experimental Dev
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                george@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:surge@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image14.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Suraj Raval</h2>
-                                <h3 class="mdc-typography--subtitle2">Surge1223</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Lead Binary and Algorithm Dev
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                surge@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:sai@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image15.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Sai Prasanna</h2>
-                                <h3 class="mdc-typography--subtitle2">BakaSai</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Lead Team Themer
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                sai@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:nathan@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image16.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Nathan Chancellor</h2>
-                                <h3 class="mdc-typography--subtitle2">nathanchance</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Documentation, Community, and Developer Relations
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                nathan@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:char@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image17.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Char G</h2>
-                                <h3 class="mdc-typography--subtitle2">Char_G</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Social media and Community manager
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                char@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:abhijeet@prjkt.io">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image18.jpg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Abhijeet Bohra</h2>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Public Relations Manager
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                abhijeet@prjkt.io
-                            </div>
-                            
-                        </a>
-                    </div>
-                    
-
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
-                        <a class="mdc-card" href="mailto:thesicrs@gmail.com">
-                            
-                            <div class="mdc-card__media mdc-card__media--square" style="background-image: url(assets/images/image22.jpeg)"></div>
-                            <div class="card-primary">
-                                <h2 class="mdc-typography--headline6">Sebastian</h2>
-                                <h3 class="mdc-typography--subtitle2">sicrs</h3>
-                            </div>
-                            <div class="card-secondary mdc-typography--body2">
-                                Website designer
-                            </div>
-                            <div class="tag">
-                                <i class="material-icons">mail</i>
-                                thesicrs@gmail.com
-                            </div>
-                            
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <div class="footer-wrapper">
-                    <div class="footer-content">
-                        <a class="footer-logo-link">
-                            <div class="footer-logo"></div>
-                        </a>
-                        <div class="footer-text mdc-typography--body1">
-                            We are a small team of developers based in Philadelphia, PA formed in March 2017. 
-                            <div class="footer-link-container">
-                                <ul>
-                                    <li><a target="_blank" href="https://t.me/substratum">Telegram</a></li>
-                                    <li><a target="_blank" href="https://www.github.com/prjkt-io">Github</a></li>
-                                    <li><a target="_blank" href="https://forum.xda-developers.com/apps/substratum">XDA</a></li>
-                                    <li><a target="_blank" href="https://plus.google.com/communities/102261717366580091389">Google+</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-
+            <section>
+                <h1 class="section--header mdc-typography--headline3">Team</h1>
+            </section>
         </div>
-            
-    </div>
-
-</body>
-
+    </body>
 </html>
