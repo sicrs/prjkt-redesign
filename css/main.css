@@ -1,7 +1,4 @@
 @media (max-width: 599px) {
-    .main {
-        width: 100vw;
-    }
     .desktop {
         display: none;
     }
@@ -24,10 +21,6 @@
 }
 
 @media (min-width: 600px) {
-    .main {
-        width: 70vw;
-        margin: 0 auto;
-    }
     .desktop {
         display: block;
     }
@@ -72,6 +65,10 @@ a {
 .section--header {
     text-align: center;
     font-family: 'Manrope'
+}
+.main {
+    max-width: 1240px;
+    margin: 0 auto;
 }
 /*HERO*/
 .hero {
@@ -181,4 +178,47 @@ a {
 .carousel-control--right {
     float: right;
     margin: 0 32px
+}
+
+/*TEAM*/
+.team-member {
+    margin: 8px 16px;
+    border-radius: 8px;
+}
+
+.spec-card {
+    height: 120px;
+    color: #fafafa
+}
+
+.spec-card::before::hover {
+    opacity: .3;
+}
+.team-wrapper {
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0, .15), rgba(0,0,0, .54))
+}
+.spec-card * {
+    z-index: 99
+}
+.team-image, .spec-card {
+    background-image: url(../assets/images/test.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.team-image::before {
+    width: 100%;
+    padding-top: 100%;
+    display: block;
+    content: ''
+}
+.team-header {
+    padding: 16px;
+}
+.team-header .mdc-typography--body1 {
+    font-family: 'Roboto Mono'
+}
+.team-content {
+    padding: 0 16px 16px;
 }

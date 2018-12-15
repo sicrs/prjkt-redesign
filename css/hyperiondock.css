@@ -1,0 +1,64 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../assets/fonts/manrope-semibold.woff") format("woff");
+    font-style: normal;
+    font-weight: 700; 
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../assets/fonts/Material-Icons-Outlined.woff') format('woff');
+}
+  
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    margin: 0px;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 16px;
+}
+h2.header {
+    font-family: 'Manrope'
+}
+
+.warning {
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 32px;
+}
+.warning-header {
+    color: #f00
+}
+.warning-header i {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.warning-content * {
+    text-align: justify;
+    font-family: 'Roboto Mono'
+}
+
+.download-button {
+    text-align: center;
+    padding: 16px 0;
+}
